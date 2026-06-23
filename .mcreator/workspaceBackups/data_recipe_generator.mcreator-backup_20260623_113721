@@ -1,0 +1,67 @@
+{
+  "mod_elements": [
+    {
+      "name": "CraftingRecipeGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "crafting_recipe_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/lyingice/datarecipegenerator/client/gui/CraftingRecipeGuiScreen.java",
+          "src/main/java/net/lyingice/datarecipegenerator/world/inventory/CraftingRecipeGuiMenu.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.data_recipe_generator.crafting_recipe_gui.mode3": "mode half active",
+      "gui.data_recipe_generator.crafting_recipe_gui.mode2": "mode active",
+      "gui.data_recipe_generator.crafting_recipe_gui.crafting2": "general name",
+      "gui.data_recipe_generator.crafting_recipe_gui.groupmisc": "group misc",
+      "gui.data_recipe_generator.crafting_recipe_gui.mode1": "mode normal",
+      "gui.data_recipe_generator.crafting_recipe_gui.groupbuilding": "group building",
+      "gui.data_recipe_generator.crafting_recipe_gui.groupredstone": "group redstone",
+      "gui.data_recipe_generator.crafting_recipe_gui.ctafting1": "general path",
+      "gui.data_recipe_generator.crafting_recipe_gui.groupequipment": "group equipment",
+      "gui.data_recipe_generator.crafting_recipe_gui.crafting3": "shape ?",
+      "gui.data_recipe_generator.crafting_recipe_gui.button_general": "general"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/lyingice/datarecipegenerator/init/DataRecipeGeneratorModMenus.java",
+      "src/main/java/net/lyingice/datarecipegenerator/init/DataRecipeGeneratorModScreens.java",
+      "src/main/java/net/lyingice/datarecipegenerator/network/MenuStateUpdateMessage.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/lyingice/datarecipegenerator/DataRecipeGeneratorMod.java",
+      "src/main/resources/data_recipe_generator.mixins.json"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "data_recipe_generator",
+    "modName": "Data Recipe Generator",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "modElementsPackage": "net.lyingice.datarecipegenerator"
+  },
+  "mcreatorVersion": 202600113616
+}

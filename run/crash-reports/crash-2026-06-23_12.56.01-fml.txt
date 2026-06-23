@@ -1,0 +1,123 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 2026-06-23 12:56:01
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:135) ~[bus-8.0.5.jar%23150!/:?] {}
+-- Mod loading issue for: data_recipe_generator --
+Details:
+	Caused by 0: java.lang.RuntimeException: java.lang.IllegalArgumentException: class net.lyingice.datarecipegenerator.network.MenuStateUpdateMessage has no @SubscribeEvent methods, but register was called anyway.
+The event bus only recognizes listener methods that have the @SubscribeEvent annotation.
+
+		at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.lambda$inject$4(AutomaticEventSubscriber.java:112) ~[loader-4.0.41.jar%23146!/:4.0] {}
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:49) ~[loader-4.0.41.jar%23146!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:126) ~[loader-4.0.41.jar%23146!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.41.jar%23146!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.41.jar%23146!/:4.0] {}
+		at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+	Mod file: /C:/Users/12501/MCreatorWorkspaces/data_recipe_generator/build/classes/java/main/
+	Failure message: Data Recipe Generator (data_recipe_generator) has failed to load correctly
+		java.lang.RuntimeException: java.lang.IllegalArgumentException: class net.lyingice.datarecipegenerator.network.MenuStateUpdateMessage has no @SubscribeEvent methods, but register was called anyway.
+		The event bus only recognizes listener methods that have the @SubscribeEvent annotation.
+		
+	Mod version: 1.0.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.IllegalArgumentException: class net.lyingice.datarecipegenerator.network.MenuStateUpdateMessage has no @SubscribeEvent methods, but register was called anyway.
+The event bus only recognizes listener methods that have the @SubscribeEvent annotation.
+
+Stacktrace:
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:135) ~[bus-8.0.5.jar%23150!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.lambda$inject$4(AutomaticEventSubscriber.java:86) ~[loader-4.0.41.jar%23146!/:4.0] {}
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:49) ~[loader-4.0.41.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:126) ~[loader-4.0.41.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.41.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.41/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.41.jar%23146!/:4.0] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.10, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Microsoft
+	Memory: 140382784 bytes (133 MiB) / 494927872 bytes (472 MiB) up to 12842958848 bytes (12248 MiB)
+	CPUs: 20
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-14600KF
+	Identifier: Intel64 Family 6 Model 183 Stepping 1
+	Microarchitecture: Raptor Lake
+	Frequency (GHz): 3.49
+	Number of physical packages: 1
+	Number of physical CPUs: 14
+	Number of logical CPUs: 20
+	Graphics card #0 name: AMD Radeon RX 7900 XT
+	Graphics card #0 vendor: Advanced Micro Devices, Inc.
+	Graphics card #0 VRAM (MiB): 20464.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.23027.2005
+	Memory slot #0 capacity (MiB): 24576.00
+	Memory slot #0 clockSpeed (GHz): 6.40
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 24576.00
+	Memory slot #1 clockSpeed (GHz): 6.40
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 52059.11
+	Virtual memory used (MiB): 31003.12
+	Swap memory total (MiB): 3072.00
+	Swap memory used (MiB): 0.00
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 70700.05, total: 307028.56
+	Space in storage for workdir (MiB): available: 70700.05, total: 307028.56
+	JVM Flags: 0 total; 
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclientdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.41.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.41.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.41.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		main                                              |Data Recipe Generator         |data_recipe_generator         |1.0.0               |Manifest: NOSIGNATURE
+		neoforge-21.1.190.jar                             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.190.jar                             |NeoForge                      |neoforge                      |21.1.190            |Manifest: NOSIGNATURE
+	Crash Report UUID: 00fbe876-9aaf-4c4a-90b7-72e695efe21f
+	FML: 4.0.41
+	NeoForge: 21.1.190

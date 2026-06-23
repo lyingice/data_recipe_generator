@@ -1,0 +1,169 @@
+{
+  "_fv": 85,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 141,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 168,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 195,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 258,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_generate",
+          "text": "generate",
+          "isUndecorated": false,
+          "width": 65,
+          "height": 20,
+          "x": 222,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "mode1",
+          "text": "mode normal",
+          "x": 24,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "mode2",
+          "text": "mode active",
+          "x": 24,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "mode3",
+          "text": "mode half active",
+          "x": 24,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "mode4",
+          "text": "mode upgrade",
+          "x": 24,
+          "y": 134,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "general path",
+          "name": "generalpath",
+          "width": 120,
+          "height": 20,
+          "x": 24,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "general name",
+          "name": "generalname",
+          "width": 120,
+          "height": 20,
+          "x": 159,
+          "y": 8,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
