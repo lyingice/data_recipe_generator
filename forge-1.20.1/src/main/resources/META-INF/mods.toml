@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="data_recipe_generator"
+version="1.0.0"
+displayName="Data Recipe Generator"
+authors="Lyingice"
+description='''Generate datapack recipe JSON from native-looking container GUIs. Open with /datarecipe or /drg.'''
+
+[[dependencies.data_recipe_generator]]
+modId="forge"
+mandatory=true
+versionRange="[47.4.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.data_recipe_generator]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

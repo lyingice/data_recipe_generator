@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+// The shared layer is intentionally Minecraft-free: it only knows IDs, JSON and
+// file layout. It is compiled once as Java 17 bytecode and its classes are
+// folded into both platform jars, so there is no extra runtime dependency.
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    withSourcesJar()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Gson is provided by Minecraft at runtime on both platforms. It is only a
+    // compile-time dependency here so we never accidentally ship a second copy.
+    compileOnly 'com.google.code.gson:gson:2.10.1'
+
+    testImplementation 'com.google.code.gson:gson:2.10.1'
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}

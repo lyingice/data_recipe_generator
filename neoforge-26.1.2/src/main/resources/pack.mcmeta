@@ -1,0 +1,9 @@
+{
+  "pack": {
+    "description": {
+      "text": "Data Recipe Generator resources"
+    },
+    "min_format": 84,
+    "max_format": 101
+  }
+}

@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev'
+}
+
+base {
+    archivesName = 'data_recipe_generator-neoforge-26.1.2'
+}
+
+// Minecraft 26.1 is compiled for Java 25. The foojay resolver in settings.gradle
+// downloads the toolchain on machines that do not have it installed yet.
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+neoForge {
+    version = '26.1.2.109'
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+        }
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.INFO
+        }
+    }
+
+    mods {
+        'data_recipe_generator' {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+dependencies {
+    implementation project(':common')
+}
+
+// Shared language files are part of this mod's resources.
+sourceSets.main.resources.srcDir project(':common').file('src/main/resources')
+
+// Make the Minecraft-free common classes part of this module's runtime output.
+// This covers both the dev run (which loads build/classes directly) and the jar.
+sourceSets.main.output.dir(
+        project(':common').layout.buildDirectory.dir('classes/java/main'),
+        builtBy: ':common:classes'
+)
+
+jar {
+    manifest {
+        attributes(
+                'Implementation-Title': 'Data Recipe Generator (NeoForge 26.1.2)',
+                'Implementation-Version': project.version
+        )
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

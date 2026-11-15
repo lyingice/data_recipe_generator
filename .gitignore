@@ -1,4 +1,20 @@
-# 项目排除路径
-/.gradle/
-/build/
-/build/classes/java/main/
+# Gradle
+.gradle/
+build/
+**/build/
+
+# IDE
+.idea/
+*.iml
+.eclipse/
+
+# Legacy MCreator workspace data
+.mcreator/
+
+# Local run directories (worlds, logs, test servers)
+run/
+**/run/
+
+# OS
+.DS_Store
+Thumbs.db
