@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build all modules
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21 (Gradle launcher)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle cache
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
+      - name: Build and test all loaders
+        run: ./gradlew build --no-daemon --stacktrace
+
+      - name: Upload mod jars
+        uses: actions/upload-artifact@v4
+        with:
+          name: DataRecipeGenerator-jars
+          if-no-files-found: error
+          path: |
+            forge-1.20.1/build/libs/*.jar
+            neoforge-1.21.1/build/libs/*.jar
+            neoforge-26.1.2/build/libs/*.jar

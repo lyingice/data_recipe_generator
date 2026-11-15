@@ -1,0 +1,48 @@
+name: Feature request
+description: Suggest a container, recipe type, or workflow improvement.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the README first. Vanilla containers without data-driven
+        recipes (brewing stand, anvil, grindstone, enchanting table, loom,
+        cartography table, beacon) cannot be generated as recipe JSON.
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Target loader
+      options:
+        - Forge 1.20.1
+        - NeoForge 1.21.1
+        - NeoForge 26.1.2
+        - All loaders
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe the UI, command, or recipe format you would like.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked the supported container table in the README.
+          required: true
+        - label: I searched existing issues and discussions.
+          required: true

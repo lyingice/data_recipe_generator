@@ -1,7 +1,19 @@
 # Data Recipe Generator
 
+**[简体中文](README.md) | [English](README.en.md)**
+
+[![Build](https://github.com/lyingice/data_recipe_generator/actions/workflows/build.yml/badge.svg)](https://github.com/lyingice/data_recipe_generator/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Forge 1.20.1](https://img.shields.io/badge/Forge-1.20.1-orange)
+![NeoForge 1.21.1](https://img.shields.io/badge/NeoForge-1.21.1-blue)
+![NeoForge 26.1.2](https://img.shields.io/badge/NeoForge-26.1.2-blue)
+
 在游戏内用**原生容器界面**摆放材料，一键生成可加载的数据包配方 JSON。  
 支持 **Forge 1.20.1**、**NeoForge 1.21.1** 与 **NeoForge 26.1.2（Minecraft 26.1.2）**。
+
+[下载最新版本](https://github.com/lyingice/data_recipe_generator/releases) ·
+[问题反馈](https://github.com/lyingice/data_recipe_generator/issues) ·
+[贡献指南](CONTRIBUTING.md)
 
 ---
 
@@ -136,6 +148,8 @@ neoforge-26.1.2/build/libs/data_recipe_generator-neoforge-26.1.2-1.0.0.jar
 
 只把对应平台的 jar 放进 `mods/`；`common` 是编译期共享模块，它的 class 已经折叠进三个平台 jar，不要单独安装。
 
+不想自己构建的话，可以从 [GitHub Releases](https://github.com/lyingice/data_recipe_generator/releases) 下载现成的三个平台 jar。
+
 ## 5. 项目结构
 
 ```text
@@ -178,3 +192,10 @@ data_recipe_generator/
 - **NeoForge 26.1.2 专用服务器**：模组正常加载；`/datarecipe`、`/drg` 及全部子指令注册成功；用本模组生成的 8 种配方（有序、无序、熔炼、切石、锻造升级、锻造纹饰、转化、注魔）放入数据包后，服务器配方数从 1515 增加到 1523，`/reload` 正常。
 - **NeoForge 1.21.1 专用服务器**：模组正常加载；`/datarecipe`、`/drg` 指令树注册成功（1.21.1 没有转化/注魔子指令）；6 种生成配方放入数据包后，服务器配方数从 1290 增加到 1296，`/reload` 正常。
 - **Forge 1.20.1 专用服务器**：用官方安装器搭建的干净服务端正常加载模组；`/datarecipe`、`/drg` 指令树注册成功。1.20.1 的 6 种配方 JSON 已用原版 1.20.1 服务端解析验证，无配方解析错误。
+
+## 8. 许可证与社区
+
+- 代码以 [MIT License](LICENSE) 发布，Copyright (c) 2026 lying_ice。
+- 贡献前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 与 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)。
+- 安全问题请使用 [GitHub 私有漏洞报告](https://github.com/lyingice/data_recipe_generator/security/advisories/new)，不要开公开 issue。
+- 变更记录见 [CHANGELOG.md](CHANGELOG.md)，支持策略见 [SECURITY.md](SECURITY.md)。

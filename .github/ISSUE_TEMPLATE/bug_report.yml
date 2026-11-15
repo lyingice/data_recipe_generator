@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a crash, wrong recipe output, or GUI problem.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please include the loader version and the exact
+        steps. Remove personal paths, server addresses and secrets from logs.
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Loader and Minecraft version
+      options:
+        - Forge 1.20.1
+        - NeoForge 1.21.1
+        - NeoForge 26.1.2
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: Data Recipe Generator version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and, if relevant, paste the generated JSON.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run /drg ...
+        2. Place ...
+        3. Press Generate
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or crash report
+      description: Paste latest.log or the crash report. This field is rendered as a shell block.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed personal paths, tokens and server secrets from the logs.
+          required: true
